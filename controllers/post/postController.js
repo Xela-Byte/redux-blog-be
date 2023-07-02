@@ -9,12 +9,12 @@ exports.createPost = async (req, res, next) => {
 
   try {
     if (!title || !content || !postedBy || !reactions) {
-      return res.status(400).json({
+      res.status(400).json({
         success: false,
         message: "All fields are required",
       });
     } else if (!existingUser) {
-      return res.status(400).json({
+      res.status(400).json({
         success: false,
         message: "You have to sign up before making a post!",
       });
@@ -47,7 +47,7 @@ exports.createPost = async (req, res, next) => {
     }
   } catch (error) {
     console.log(error);
-    return res.status(500).json({
+    res.status(500).json({
       success: false,
       message: "Internal Server Error",
     });
