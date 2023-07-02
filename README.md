@@ -1,4 +1,5 @@
-# FyEd
+# Redux
 
-## FyEd BackendCode Repo
+## Redux BackendCode Repo
+
 # redux-blog-be

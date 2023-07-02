@@ -1,7 +1,7 @@
 {
-  "name": "fyed-backend",
+  "name": "redux-blog-be",
   "version": "1.0.0",
-  "description": "Backend functionality for FyEd",
+  "description": "Backend functionality for Redux Blog",
   "main": "server.js",
   "scripts": {
     "native": "node server.js",
