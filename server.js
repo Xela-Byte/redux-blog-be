@@ -8,7 +8,7 @@ const postRouter = require("./routes/postRoutes");
 
 const app = express();
 
-const whitelist = [];
+const whitelist = ["http://localhost:3000"];
 
 app.use(
   cors({
