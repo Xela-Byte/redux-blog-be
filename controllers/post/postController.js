@@ -13,7 +13,8 @@ exports.createPost = async (req, res, next) => {
         success: false,
         message: "All fields are required",
       });
-    } else if (!existingUser) {
+    }
+    if (!existingUser) {
       res.status(400).json({
         success: false,
         message: "You have to sign up before making a post!",
