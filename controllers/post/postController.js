@@ -5,7 +5,6 @@ const { User } = require("../../models/User");
 exports.createPost = async (req, res, next) => {
   const { title, content, postedBy, reactions } = req.body;
   const user = req.user;
-  const existingUser = await User.findOne({ _id: postedBy });
 
   try {
     if (!title || !content || !postedBy || !reactions) {
@@ -14,6 +13,7 @@ exports.createPost = async (req, res, next) => {
         message: "All fields are required",
       });
     }
+    const existingUser = await User.findOne({ _id: postedBy });
     if (!existingUser) {
       res.status(400).json({
         success: false,
